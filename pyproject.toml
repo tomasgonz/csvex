@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csvex"
+version = "1.0.0"
+description = "CSV Explorer by Tomas Gonzalez - A CLI tool for exploring CSV files"
+readme = "README.md"
+authors = [
+    {name = "Tomas Gonzalez"}
+]
+license = {text = "MIT"}
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["pandas"]
+
+[project.scripts]
+csvex = "csvex:main"
+
+[project.urls]
+Homepage = "https://github.com/tomasgonz/csvex"
