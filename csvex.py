@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""CSV Explorer - A CLI tool for exploring CSV files."""
+"""CSV Explorer - by Tomas Gonzalez - A CLI tool for exploring CSV files."""
+"""CSV Explorer - by Tomas Gonzalez - A CLI tool for exploring CSV files."""
 
 import argparse
 import csv
@@ -127,10 +128,10 @@ def cmd_unique(args):
 def main():
     parser = argparse.ArgumentParser(
         prog='csvex',
-        description='CSV Explorer - A CLI tool for exploring CSV files'
+        description='CSV Explorer - by Tomas Gonzalez - A CLI tool for exploring CSV files'
     )
     parser.add_argument('file', help='Path to CSV file', nargs='?', default=None)
-    parser.add_argument('-v', '--version', action='version', version='csvex 1.0.0')
+    parser.add_argument('-v', '--version', action='version', version='csvex 1.0.0 by Tomas Gonzalez')
 
     subparsers = parser.add_subparsers(dest='command', help='Available commands')
 

@@ -1,6 +1,8 @@
 # csvex - CSV Explorer CLI
 
-A simple CLI tool for exploring CSV files.
+> by Tomas Gonzalez
+
+A simple CLI tool for exploring CSV files, built by Tomas Gonzalez.
 
 ## Installation
 
