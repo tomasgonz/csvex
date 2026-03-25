@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "csvex"
-version = "1.0.0"
+version = "1.3.0"
 description = "CSV Explorer by Tomas Gonzalez - A CLI tool for exploring CSV files"
 readme = "README.md"
 authors = [
@@ -21,6 +21,7 @@ dependencies = ["pandas"]
 
 [project.scripts]
 csvex = "csvex:main"
+c = "csvex:main"
 
 [project.urls]
 Homepage = "https://github.com/tomasgonz/csvex"
