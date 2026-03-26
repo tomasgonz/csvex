@@ -1,0 +1,11 @@
+order_id,order_date,region,channel,customer_segment,product,units,unit_price,revenue,status
+SO-1001,2025-01-04,Northeast,Direct,Enterprise,Analytics Suite,12,1200,14400,Closed Won
+SO-1002,2025-01-09,West,Partner,SMB,Starter Pack,40,220,8800,Closed Won
+SO-1003,2025-01-15,South,Direct,Mid-Market,Forecast Pro,18,640,11520,Closed Won
+SO-1004,2025-02-02,Central,Online,SMB,Starter Pack,55,215,11825,Closed Won
+SO-1005,2025-02-11,Europe,Partner,Enterprise,Analytics Suite,16,1180,18880,Closed Won
+SO-1006,2025-03-06,APAC,Online,SMB,Insights Cloud,24,410,9840,Renewal
+SO-1007,2025-03-17,West,Direct,Enterprise,Forecast Pro,20,655,13100,Closed Won
+SO-1008,2025-04-03,Northeast,Online,Mid-Market,Insights Cloud,14,405,5670,Expansion
+SO-1009,2025-04-18,South,Partner,SMB,Starter Pack,62,210,13020,Closed Won
+SO-1010,2025-05-01,Europe,Direct,Enterprise,Analytics Suite,22,1210,26620,Closed Won

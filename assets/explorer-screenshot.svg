@@ -1,48 +1,48 @@
 <svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg2" x1="160" y1="70" x2="1280" y2="830" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#07131F"/>
-      <stop offset="1" stop-color="#18253D"/>
+      <stop stop-color="#130809"/>
+      <stop offset="1" stop-color="#22090D"/>
     </linearGradient>
     <linearGradient id="glow2" x1="260" y1="150" x2="1160" y2="760" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0EA5E9" stop-opacity="0.28"/>
-      <stop offset="1" stop-color="#F59E0B" stop-opacity="0.18"/>
+      <stop stop-color="#F43F5E" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity="0.18"/>
     </linearGradient>
     <filter id="shadow2" x="140" y="90" width="1160" height="700" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feDropShadow dx="0" dy="26" stdDeviation="28" flood-color="#020617" flood-opacity="0.45"/>
     </filter>
   </defs>
   <rect width="1440" height="900" fill="url(#bg2)"/>
-  <circle cx="220" cy="150" r="160" fill="#06B6D4" fill-opacity="0.08"/>
-  <circle cx="1200" cy="730" r="240" fill="#F59E0B" fill-opacity="0.08"/>
+  <circle cx="220" cy="150" r="160" fill="#EF4444" fill-opacity="0.08"/>
+  <circle cx="1200" cy="730" r="240" fill="#B91C1C" fill-opacity="0.08"/>
   <rect x="190" y="130" width="1060" height="640" rx="24" fill="#09111F" filter="url(#shadow2)"/>
   <rect x="190" y="130" width="1060" height="640" rx="24" stroke="#1E293B" stroke-width="2"/>
   <rect x="190" y="130" width="1060" height="640" rx="24" fill="url(#glow2)"/>
   <rect x="190" y="130" width="1060" height="54" rx="24" fill="#111827"/>
   <circle cx="232" cy="157" r="8" fill="#FB7185"/>
   <circle cx="258" cy="157" r="8" fill="#FBBF24"/>
-  <circle cx="284" cy="157" r="8" fill="#34D399"/>
+  <circle cx="284" cy="157" r="8" fill="#FCA5A5"/>
   <text x="326" y="163" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18">c explore research-data/</text>
-  <rect x="220" y="204" width="1000" height="36" rx="10" fill="#06B6D4"/>
+  <rect x="220" y="204" width="1000" height="36" rx="10" fill="#FB7185"/>
   <text x="242" y="228" fill="#020617" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="700">CSV Explorer | BROWSE | root: research-data | here: 2026/surveys | 3 here | 19+ total | scanning 18 dirs | 27 csvs</text>
-  <rect x="220" y="260" width="1000" height="44" rx="10" fill="#10233A"/>
+  <rect x="220" y="260" width="1000" height="44" rx="10" fill="#160F10"/>
   <text x="246" y="288" fill="#FDE68A" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" font-weight="700">&gt;&gt; ../  [parent]</text>
-  <rect x="220" y="314" width="1000" height="44" rx="10" fill="#13263F"/>
-  <text x="246" y="342" fill="#67E8F9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" font-weight="700">   north_america/  [4 here | 9 total]</text>
-  <rect x="220" y="368" width="1000" height="44" rx="10" fill="#EAB308"/>
-  <text x="246" y="396" fill="#171717" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" font-weight="700">&gt;&gt; europe/  [2 here | 6 total]</text>
-  <rect x="220" y="422" width="1000" height="44" rx="10" fill="#13263F"/>
-  <text x="246" y="450" fill="#67E8F9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" font-weight="700">   asia/  [1 here | 4 total]</text>
-  <rect x="220" y="476" width="1000" height="44" rx="10" fill="#0F172A"/>
+  <rect x="220" y="314" width="1000" height="44" rx="10" fill="#2A0F14"/>
+  <text x="246" y="342" fill="#FCA5A5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" font-weight="700">   north_america/  [4 here | 9 total]</text>
+  <rect x="220" y="368" width="1000" height="44" rx="10" fill="#7F1D1D"/>
+  <text x="246" y="396" fill="#FEE2E2" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" font-weight="700">&gt;&gt; europe/  [2 here | 6 total]</text>
+  <rect x="220" y="422" width="1000" height="44" rx="10" fill="#2A0F14"/>
+  <text x="246" y="450" fill="#FCA5A5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20" font-weight="700">   asia/  [1 here | 4 total]</text>
+  <rect x="220" y="476" width="1000" height="44" rx="10" fill="#160F10"/>
   <text x="246" y="504" fill="#E2E8F0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">   respondents.csv</text>
-  <rect x="220" y="530" width="1000" height="44" rx="10" fill="#10233A"/>
+  <rect x="220" y="530" width="1000" height="44" rx="10" fill="#2A0F14"/>
   <text x="246" y="558" fill="#D8E4F4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">   responses.csv  [2026/surveys]</text>
-  <rect x="220" y="584" width="1000" height="44" rx="10" fill="#0F172A"/>
+  <rect x="220" y="584" width="1000" height="44" rx="10" fill="#160F10"/>
   <text x="246" y="612" fill="#E2E8F0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">   country_summary.csv  [2026/surveys]</text>
-  <rect x="220" y="638" width="1000" height="44" rx="10" fill="#10233A"/>
+  <rect x="220" y="638" width="1000" height="44" rx="10" fill="#2A0F14"/>
   <text x="246" y="666" fill="#D8E4F4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">   quality_checks.csv  [2026/surveys]</text>
-  <rect x="220" y="716" width="1000" height="30" rx="10" fill="#C026D3"/>
-  <text x="242" y="736" fill="#FAE8FF" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700">Enter/l open | h/u/backspace up | a toggle browse/all | arrows/jk move | PgUp/PgDn page | r rescan | q quit | scanning 18 dirs | 27 csvs</text>
+  <rect x="220" y="716" width="1000" height="30" rx="10" fill="#7F1D1D"/>
+  <text x="242" y="736" fill="#FEE2E2" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700">Enter/l open | h/u/backspace up | a toggle browse/all | arrows/jk move | PgUp/PgDn page | r rescan | q quit | scanning 18 dirs | 27 csvs</text>
   <text x="190" y="84" fill="#E2E8F0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="44" font-weight="700">Folder explorer with live counts</text>
   <text x="190" y="110" fill="#8FA3C0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22">Browse current and nested folders first, then let recursive totals stream in as the background scan progresses.</text>
 </svg>

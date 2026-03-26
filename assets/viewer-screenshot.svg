@@ -1,50 +1,50 @@
 <svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="120" y1="80" x2="1320" y2="820" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#081120"/>
-      <stop offset="1" stop-color="#13213A"/>
+      <stop stop-color="#130809"/>
+      <stop offset="1" stop-color="#22090D"/>
     </linearGradient>
     <linearGradient id="glow" x1="220" y1="160" x2="1220" y2="760" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#22D3EE" stop-opacity="0.25"/>
-      <stop offset="1" stop-color="#A855F7" stop-opacity="0.18"/>
+      <stop stop-color="#F43F5E" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity="0.18"/>
     </linearGradient>
     <filter id="shadow" x="140" y="90" width="1160" height="700" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feDropShadow dx="0" dy="26" stdDeviation="28" flood-color="#020617" flood-opacity="0.45"/>
     </filter>
   </defs>
   <rect width="1440" height="900" fill="url(#bg)"/>
-  <circle cx="1210" cy="122" r="210" fill="#22D3EE" fill-opacity="0.08"/>
-  <circle cx="270" cy="760" r="260" fill="#A855F7" fill-opacity="0.07"/>
+  <circle cx="1210" cy="122" r="210" fill="#EF4444" fill-opacity="0.08"/>
+  <circle cx="270" cy="760" r="260" fill="#B91C1C" fill-opacity="0.08"/>
   <rect x="190" y="130" width="1060" height="640" rx="24" fill="#09111F" filter="url(#shadow)"/>
   <rect x="190" y="130" width="1060" height="640" rx="24" stroke="#1E293B" stroke-width="2"/>
   <rect x="190" y="130" width="1060" height="640" rx="24" fill="url(#glow)"/>
   <rect x="190" y="130" width="1060" height="54" rx="24" fill="#111827"/>
   <circle cx="232" cy="157" r="8" fill="#FB7185"/>
   <circle cx="258" cy="157" r="8" fill="#FBBF24"/>
-  <circle cx="284" cy="157" r="8" fill="#34D399"/>
+  <circle cx="284" cy="157" r="8" fill="#FCA5A5"/>
   <text x="326" y="163" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18">c test_data.csv</text>
-  <rect x="220" y="204" width="1000" height="36" rx="10" fill="#06B6D4"/>
+  <rect x="220" y="204" width="1000" height="36" rx="10" fill="#FB7185"/>
   <text x="242" y="228" fill="#020617" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" font-weight="700">CSV Explorer | VIEW | test_data.csv | rows 1-8 of 10 | cols 5 | x=0</text>
-  <rect x="220" y="256" width="1000" height="40" rx="8" fill="#22C55E"/>
-  <text x="246" y="282" fill="#04130A" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="21" font-weight="700">#    name  age        city country  salary</text>
-  <rect x="220" y="306" width="1000" height="42" rx="8" fill="#0F172A"/>
+  <rect x="220" y="256" width="1000" height="40" rx="8" fill="#991B1B"/>
+  <text x="246" y="282" fill="#FEE2E2" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="21" font-weight="700">#    name  age        city country  salary</text>
+  <rect x="220" y="306" width="1000" height="42" rx="8" fill="#160F10"/>
   <text x="246" y="333" fill="#E2E8F0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">0   Alice   30    New York     USA   75000</text>
-  <rect x="220" y="356" width="1000" height="42" rx="8" fill="#10233A"/>
+  <rect x="220" y="356" width="1000" height="42" rx="8" fill="#2A0F14"/>
   <text x="246" y="383" fill="#D6E4F0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">1     Bob   25 Los Angeles     USA   55000</text>
-  <rect x="220" y="406" width="1000" height="42" rx="8" fill="#0F172A"/>
+  <rect x="220" y="406" width="1000" height="42" rx="8" fill="#160F10"/>
   <text x="246" y="433" fill="#E2E8F0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">2 Charlie   35     Chicago     USA   85000</text>
-  <rect x="220" y="456" width="1000" height="42" rx="8" fill="#10233A"/>
+  <rect x="220" y="456" width="1000" height="42" rx="8" fill="#2A0F14"/>
   <text x="246" y="483" fill="#D6E4F0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">3   Diana   28      Boston     USA   62000</text>
-  <rect x="220" y="506" width="1000" height="42" rx="8" fill="#0F172A"/>
+  <rect x="220" y="506" width="1000" height="42" rx="8" fill="#160F10"/>
   <text x="246" y="533" fill="#E2E8F0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">4     Eve   32     Seattle     USA   72000</text>
-  <rect x="220" y="556" width="1000" height="42" rx="8" fill="#10233A"/>
+  <rect x="220" y="556" width="1000" height="42" rx="8" fill="#2A0F14"/>
   <text x="246" y="583" fill="#D6E4F0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">5   Frank   45      London      UK   95000</text>
-  <rect x="220" y="606" width="1000" height="42" rx="8" fill="#0F172A"/>
+  <rect x="220" y="606" width="1000" height="42" rx="8" fill="#160F10"/>
   <text x="246" y="633" fill="#E2E8F0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">6   Grace   29       Paris  France   58000</text>
-  <rect x="220" y="656" width="1000" height="42" rx="8" fill="#10233A"/>
+  <rect x="220" y="656" width="1000" height="42" rx="8" fill="#2A0F14"/>
   <text x="246" y="683" fill="#D6E4F0" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">7   Henry   38      Berlin Germany   78000</text>
-  <rect x="220" y="716" width="1000" height="30" rx="10" fill="#C026D3"/>
-  <text x="242" y="736" fill="#FAE8FF" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700">arrows/hjkl move | PgUp/PgDn page | 0/$ left/right edge | b back | r files | q quit | scan complete | 10 csvs</text>
+  <rect x="220" y="716" width="1000" height="30" rx="10" fill="#7F1D1D"/>
+  <text x="242" y="736" fill="#FEE2E2" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" font-weight="700">arrows/hjkl move | PgUp/PgDn page | 0/$ left/right edge | b back | r files | q quit | scan complete | 10 csvs</text>
   <text x="190" y="84" fill="#E2E8F0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="44" font-weight="700">Interactive table view</text>
   <text x="190" y="110" fill="#8FA3C0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22">Open a CSV and start reading immediately, with strong row contrast and horizontal scrolling when wide files need it.</text>
 </svg>

@@ -1,0 +1,11 @@
+respondent_id,team,location,tool_used,satisfaction,weekly_hours,would_recommend,notes
+R-001,Data Platform,New York,csvex,9,6,yes,"Uses search and sorting daily."
+R-002,Finance Ops,Chicago,Spreadsheet,5,12,no,"Too many manual pivots."
+R-003,Growth,London,csvex,8,4,yes,"Loves the explorer for campaign exports."
+R-004,Support,Berlin,Internal BI,6,9,maybe,"Would like faster ad-hoc inspection."
+R-005,Analytics,Tokyo,csvex,10,7,yes,"Column inspector is the main draw."
+R-006,RevOps,Sydney,Spreadsheet,4,15,no,"Needs better compare workflows."
+R-007,Product Ops,Toronto,csvex,8,5,yes,"Quality checks caught duplicate uploads."
+R-008,Research,Paris,csvex,9,8,yes,"Uses SQL mode for quick summaries."
+R-009,Operations,Mumbai,Notebook,7,10,maybe,"Would export more filtered views."
+R-010,Marketing,San Francisco,csvex,9,5,yes,"Wants saved searches next."
