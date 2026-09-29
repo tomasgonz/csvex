@@ -14,6 +14,7 @@ import shutil
 import sqlite3
 import sys
 import threading
+import time
 from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
@@ -41,16 +42,41 @@ COMPRESSED_SUFFIXES = {".gz", ".bz2", ".xz", ".zip"}
 PREVIEW_ROW_LIMIT = 5000
 LARGE_FILE_BYTES = 25 * 1024 * 1024
 MAX_RECENT_FILES = 30
+MAX_SCAN_EVENTS_PER_FRAME = 120
+MAX_SCAN_SECONDS_PER_FRAME = 0.006
 STATE_FILE = Path.home() / ".csvex-state.json"
 APP_ROOT = Path(__file__).resolve().parent
 DEMO_ROOT = APP_ROOT / "examples" / "demo"
 DEFAULT_DEMO_ENTRY = Path("sales") / "sales_2026.csv"
 
-try:
-    import pandas as pd
-except ImportError:
-    print("Error: pandas is required. Install with: pip install pandas")
-    sys.exit(1)
+class LazyPandas:
+    def __init__(self):
+        self._module = None
+
+    def _load(self):
+        if self._module is None:
+            try:
+                import pandas as pandas_module
+            except ImportError:
+                print("Error: pandas is required. Install with: pip install pandas")
+                sys.exit(1)
+            self._module = pandas_module
+        return self._module
+
+    def __getattr__(self, name):
+        return getattr(self._load(), name)
+
+
+class EmptyTableView:
+    empty = True
+    columns: tuple[str, ...] = ()
+
+    def __len__(self) -> int:
+        return 0
+
+
+pd = LazyPandas()
+EMPTY_TABLE = EmptyTableView()
 
 
 BANNER_LINES = (
@@ -886,7 +912,7 @@ class CSVExplorerTUI:
 
         self.active_file: Path | None = None
         self.active_explorer: CSVExplorer | None = None
-        self.view_df = pd.DataFrame()
+        self.view_df = EMPTY_TABLE
         self.visible_columns: list[str] = []
         self.pinned_columns: list[str] = []
         self.selected_column_name: str | None = None
@@ -904,6 +930,8 @@ class CSVExplorerTUI:
         self.watch_mode = False
         self.last_mtime: float | None = None
         self.preview_rows: int | None = None
+        self.table_cache_key: tuple[object, ...] | None = None
+        self.table_cache_lines: list[str] = []
 
         self.overlay_title = startup_overlay_title
         self.overlay_lines: list[str] = list(startup_overlay_lines or [])
@@ -1030,8 +1058,9 @@ class CSVExplorerTUI:
         files_added = False
         refresh_entries = False
         processed = 0
+        started_at = time.perf_counter()
 
-        while processed < 500:
+        while processed < MAX_SCAN_EVENTS_PER_FRAME and (time.perf_counter() - started_at) < MAX_SCAN_SECONDS_PER_FRAME:
             try:
                 generation, kind, payload = self.scan_queue.get_nowait()
             except queue.Empty:
@@ -1354,10 +1383,15 @@ class CSVExplorerTUI:
         self.selected_column_name = display_columns[(index + direction) % len(display_columns)]
         self.status_message = f"Current column: {self.selected_column_name}"
 
+    def _invalidate_table_cache(self) -> None:
+        self.table_cache_key = None
+        self.table_cache_lines = []
+
     def _rebuild_view(self) -> None:
         if self.active_explorer is None:
-            self.view_df = pd.DataFrame()
+            self.view_df = EMPTY_TABLE
             self.search_matches = []
+            self._invalidate_table_cache()
             return
 
         dataframe = self.active_explorer.df
@@ -1369,6 +1403,7 @@ class CSVExplorerTUI:
             dataframe = dataframe.sort_values(by=self.sort_column, ascending=not self.sort_reverse, kind="mergesort", na_position="last")
 
         self.view_df = dataframe
+        self._invalidate_table_cache()
         self.visible_columns = [column for column in self.visible_columns if column in dataframe.columns]
         if not self.visible_columns:
             self.visible_columns = list(dataframe.columns)
@@ -1871,6 +1906,10 @@ class CSVExplorerTUI:
         if not display_columns:
             return ["(no visible columns)"]
 
+        cache_key = (id(self.view_df), self.row_offset, page_rows, tuple(display_columns))
+        if cache_key == self.table_cache_key:
+            return self.table_cache_lines
+
         preview = self.view_df.iloc[self.row_offset : self.row_offset + page_rows][display_columns].copy()
         preview.insert(0, "#", preview.index)
 
@@ -1885,7 +1924,9 @@ class CSVExplorerTUI:
             40,
         ):
             rendered = preview.to_string(index=False, na_rep="")
-        return rendered.splitlines() if rendered else ["(empty result)"]
+        self.table_cache_key = cache_key
+        self.table_cache_lines = rendered.splitlines() if rendered else ["(empty result)"]
+        return self.table_cache_lines
 
     def _selected_row_lines(self) -> list[str]:
         if self.view_df.empty:
